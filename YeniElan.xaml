@@ -7,25 +7,25 @@
         mc:Ignorable="d"
         Title="YeniElan" Height="450" Width="870">
     <Grid Background="LightSteelBlue">
-        <Label Content="Model" HorizontalAlignment="Left" Margin="22,34,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black" FontFamily="Arial Black"/>
+        <Label Content="Model" HorizontalAlignment="Left" Margin="27,34,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black" FontFamily="Arial Black"/>
         <Label Content="Haqqinda" HorizontalAlignment="Left" Margin="22,333,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black" FontFamily="Arial Black"/>
         <Label Content="Qiymet" HorizontalAlignment="Left" Margin="22,259,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black" FontFamily="Arial Black"/>
         <Label Content="reng" HorizontalAlignment="Left" Margin="22,183,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black" FontFamily="Arial Black"/>
-        <Label Content="Km" HorizontalAlignment="Left" Margin="22,107,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Arial Black" Foreground="Black"/>
-        <TextBox x:Name="model" HorizontalAlignment="Left" Margin="149,36,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="147" Height="29"/>
-        <TextBox x:Name="Haqqinda" HorizontalAlignment="Left" Margin="149,333,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="265" Height="81"/>
+        <Label Content="Km" HorizontalAlignment="Left" Margin="31,105,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Arial Black" Foreground="Black"/>
+        <TextBox x:Name="model" HorizontalAlignment="Left" Margin="149,34,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="147" Height="29"/>
+        <TextBox x:Name="Haqqinda" HorizontalAlignment="Left" Margin="149,333,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="195" Height="91"/>
         <TextBox x:Name="Qiymet" HorizontalAlignment="Left" Margin="149,259,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="147" Height="29"/>
         <TextBox x:Name="reng" HorizontalAlignment="Left" Margin="149,185,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="147" Height="29"/>
         <TextBox x:Name="Km" HorizontalAlignment="Left" Margin="149,107,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="147" Height="29"/>
 
-        <ListBox x:Name="photoListBox" Margin="533,141,56,104" ItemsSource="{Binding Photos}">
+        <ListBox x:Name="photoListBox" Margin="477,28,111,217" ItemsSource="{Binding Photos}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding}" Width="300" Height="140" Margin="5"/>
+                    <Image Source="{Binding}" Width="300" Height="140" Margin="0,0,0,0"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Foto Seç" Click="SelectPhotoButton_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="613,0,0,15" Width="100"/>
-        <Button Content="Arabayı Ekle" Click="AddCarButton_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="613,0,0,70" Width="120"/>
+        <Button Content="Sekil Seç" Click="SelectPhotoButton_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="492,0,0,160" Width="95" Height="35"/>
+        <Button Content="Elani elave et" Click="AddCarButton_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="727,0,0,12" Width="120" Height="44"/>
     </Grid>
 </Window>

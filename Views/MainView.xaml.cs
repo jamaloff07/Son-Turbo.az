@@ -23,18 +23,24 @@ namespace WpfApp3.Views
     {
         private string selectedModel;
 
+
         private viewModel viewModel;
 
         string adUrl = "https://arazmarket.az/";
         string adUrl1 = "https://arazmarket.az/";
+
+        string adUrl2 = "https://arazmarket.az/";
+        string adUrl3 = "https://arazmarket.az/";
         public MainView()
         {
             InitializeComponent();
 
             viewModel = new viewModel();
             DataContext = viewModel;
-            LoadAd(adUrl);
-            LoadAd(adUrl1);
+            webBrowser1.Source = new Uri(adUrl);
+            webBrowser2.Source = new Uri(adUrl1);
+            webBrowser3.Source = new Uri(adUrl2);
+ 
         }
 
         private void CarImage_Click(object sender, MouseButtonEventArgs e)
@@ -73,6 +79,9 @@ namespace WpfApp3.Views
             BitmapImage image = new BitmapImage(new System.Uri(carImage));
             selectedModelImage.Source = image;
         }
+
+
+
         private CarInfo GetCarInfoByTag(string carTag)
         {
             CarInfo selectedCar = null;
@@ -450,26 +459,6 @@ namespace WpfApp3.Views
         }
 
 
-        private void LoadAd(string url)
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error: " + ex.Message);
-            }
-
-            try
-            {
-                webBrowser1.Navigate(new Uri(url));
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("error: " + ex.Message);
-            }
-        }
+      
     }
 }
